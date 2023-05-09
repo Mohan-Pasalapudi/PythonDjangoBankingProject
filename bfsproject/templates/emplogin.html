@@ -1,0 +1,409 @@
+
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block 'title' %}
+        Employee Login
+        {% endblock %}</title>
+    <style>
+
+* {
+   box-sizing: border-box;
+}
+
+
+
+        .navbar{
+            background-color: rgba(107, 25, 6, 0.968);
+            border-radius: 1px;
+            position:relative;
+
+        }
+        .navbar ul{
+            overflow: auto;
+        }
+     .navbar li{
+            float:left;
+            list-style: none;
+            margin: 17px;
+
+        }
+        .navbar li a{
+            padding: 3px 3px;
+            text-decoration: none;
+            color: white;
+        }
+        .navbar li a:hover{
+            color: red
+        }
+        .search{
+            float: right;
+            color: white;
+            padding: 12px 75px;
+        }
+        .navbar input{
+            border: 2px solid black;
+            border-radius: 14px;
+            padding: 3px 17px;
+            width: 129px;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+body{
+  background: #dce9e6;
+  overflow: hidden;
+}
+::selection{
+  background:#8d0e0e;
+}
+.container{
+  max-width: 440px;
+  padding: 0 20px;
+  margin: 170px auto;
+}
+.wrapper{
+  width: 100%;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.1);
+}
+.wrapper .title{
+  height: 90px;
+  background: #8d0e0e;
+  border-radius: 5px 5px 0 0;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper form{
+  padding: 30px 25px 25px 25px;
+}
+.wrapper form .row{
+  height: 45px;
+  margin-bottom: 15px;
+  position: static;
+}
+.wrapper form .row input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 12px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+form .row input:focus{
+  border-color: #8d0e0e;
+  box-shadow: inset 0px 0px 2px 2px rgba(26,188,156,0.25);
+}
+form .row input::placeholder{
+  color: #999;
+}
+.wrapper form .row i{
+  position: static;
+  width: 47px;
+  height: 100%;
+  color: #8d0e0es;
+  font-size: 18px;
+  background: #8d0e0e;
+  border: 1px solid #16a085;
+  border-radius: 5px 0 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper form .pass{
+  margin: -8px 0 20px 0;
+}
+.wrapper form .pass a{
+  color: #8d0e0e;
+  font-size: 17px;
+  text-decoration: none;
+}
+.wrapper form .pass a:hover{
+  text-decoration: underline;
+}
+.wrapper form .button input{
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  padding-left: 0px;
+  background: #8d0e0e;
+  border: 1px solid #8d0e0e;
+  cursor: pointer;
+}
+form .button input:hover{
+  background: #8d0e0e;
+}
+.wrapper form .signup-link{
+  text-align: center;
+  margin-top: 20px;
+  font-size: 17px;
+}
+.wrapper form .signup-link a{
+  color: #8d0e0e;
+  text-decoration: none;
+}
+form .signup-link a:hover{
+  text-decoration: underline;
+}
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: Raleway, sans-serif;
+}
+
+body {
+	background: linear-gradient(90deg, #C7C5F4, #776BCC);
+}
+
+.container {
+	margin:auto;
+	margin-top:20px;
+}
+
+.screen {
+	background: linear-gradient(90deg, #5D54A4, #7C78B8);
+	position: relative;
+	height: 600px;
+	width: 360px;
+	box-shadow: 0px 0px 24px #5C5696;
+}
+
+.screen__content {
+	z-index: 1;
+	position: relative;
+	height: 100%;
+}
+
+.screen__background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 0;
+	-webkit-clip-path: inset(0 0 0 0);
+	clip-path: inset(0 0 0 0);
+}
+
+.screen__background__shape {
+	transform: rotate(45deg);
+	position: absolute;
+}
+
+.screen__background__shape1 {
+	height: 520px;
+	width: 520px;
+	background: #FFF;
+	top: -50px;
+	right: 120px;
+	border-radius: 0 72px 0 0;
+}
+
+.screen__background__shape2 {
+	height: 220px;
+	width: 220px;
+	background: #6C63AC;
+	top: -172px;
+	right: 0;
+	border-radius: 32px;
+}
+
+.screen__background__shape3 {
+	height: 540px;
+	width: 190px;
+	background: linear-gradient(270deg, #5D54A4, #6A679E);
+	top: -24px;
+	right: 0;
+	border-radius: 32px;
+}
+
+.screen__background__shape4 {
+	height: 400px;
+	width: 200px;
+	background: #7E7BB9;
+	top: 420px;
+	right: 50px;
+	border-radius: 60px;
+}
+
+.login {
+	width: 320px;
+	padding: 30px;
+	padding-top: 156px;
+}
+
+.login__field {
+	padding: 20px 0px;
+	position: relative;
+}
+
+.login__icon {
+	position: absolute;
+	top: 30px;
+	color: #7875B5;
+}
+
+.login__input {
+	border: none;
+	border-bottom: 2px solid #D1D1D4;
+	background: none;
+	padding: 10px;
+	padding-left: 24px;
+	font-weight: 700;
+	width: 75%;
+	transition: .2s;
+}
+
+.login__input:active,
+.login__input:focus,
+.login__input:hover {
+	outline: none;
+	border-bottom-color: #6A679E;
+}
+
+.login__submit {
+	background: #fff;
+	font-size: 14px;
+	margin-top: 30px;
+	padding: 16px 20px;
+	border-radius: 26px;
+	border: 1px solid #D4D3E8;
+	text-transform: uppercase;
+	font-weight: 700;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	color: #4C489D;
+	box-shadow: 0px 2px 2px #5C5696;
+	cursor: pointer;
+	transition: .2s;
+}
+
+.login__submit:active,
+.login__submit:focus,
+.login__submit:hover {
+	border-color: #6A679E;
+	outline: none;
+}
+
+.button__icon {
+	font-size: 24px;
+	margin-left: auto;
+	color: #7875B5;
+}
+body
+		{
+		 overflow-y: scroll;
+		 }
+
+
+    </style>
+</head>
+<body>
+<header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'empregistration' %}">Employee Registration</a></li>
+                <li><a href="{% url 'emplogin' %}">Employee Login</a></li>
+                 <li><a href="{% url 'cusregistration' %}">Customer Registration</a></li>
+                 <li><a href="{% url 'cuslogin' %}">Customer Login</a></li>
+                <li><a href="{% url 'adminlogin' %}">Admin Login</a></li>
+                <li><a href="">About Us</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+
+{% block 'body' %}
+
+<h3 align="center"><mark>{{msg}}</mark></h3>
+
+<h3 align="Center"><u>Employee Login</u></h3>
+
+
+<!--<form method="post" action="{% url 'checkemplogin' %}">
+{% csrf_token %}
+
+<table align=center class="re">
+
+<tr >
+<td><label>Username</label></td>
+<td><input type="text" name="username" required="required"/></td>
+</tr>
+
+<tr><td></td></tr>
+
+<tr>
+<td><label>Password</label></td>
+<td><input type="password" name="password" required="required"/></td>
+</tr>
+
+<tr><td></td></tr>
+<tr><td></td></tr>
+
+<tr align=center>
+<td colspan=2><input type="submit" value="Login" class="button"></td>
+</tr>
+
+</table>
+
+</form>-->
+<div class="container">
+	<div class="screen">
+		<div class="screen__content">
+
+                <form method="post" action="{% url 'checkemplogin' %}" class="login" >
+{% csrf_token %}
+				<div class="login__field">
+					<i class="login__icon fas fa-user"></i>
+
+                    <input type="text"  class="login__input" name="username" placeholder="User name / Email" required="required"/>
+				</div>
+				<div class="login__field">
+					<i class="login__icon fas fa-lock"></i>
+
+                    <input type="password" class="login__input" name="password" required="required" placeholder="Password">
+				</div>
+				<button class="button login__submit">
+
+					<span class="button__text" input type="submit" value="Login" class="button">Login</span>
+					<i class="button__icon fas fa-chevron-right"></i>
+				</button>
+			</form>
+
+		</div>
+		<div class="screen__background">
+			<span class="screen__background__shape screen__background__shape4"></span>
+			<span class="screen__background__shape screen__background__shape3"></span>
+			<span class="screen__background__shape screen__background__shape2"></span>
+			<span class="screen__background__shape screen__background__shape1"></span>
+		</div>
+	</div>
+</div>
+
+
+{% endblock %}
+
+</body>
+</html>

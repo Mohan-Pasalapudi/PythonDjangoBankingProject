@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+        .navbar{
+            background-color: rgba(107, 25, 6, 0.968);
+            border-radius: 1px;
+            position:relative;
+
+        }
+        .navbar ul{
+            overflow: auto;
+        }
+      .navbar li{
+            float:left;
+            list-style: none;
+            margin: 17px;
+
+        }
+        .navbar li a{
+            padding: 3px 3px;
+            text-decoration: none;
+            color: white;
+        }
+        .navbar li a:hover{
+            color: red
+        }
+        .search{
+            float: right;
+            color: white;
+            padding: 12px 75px;
+        }
+        .navbar input{
+            border: 2px solid black;
+            border-radius: 14px;
+            padding: 3px 17px;
+            width: 129px;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+body{
+  background: #dce9e6;
+  overflow: hidden;
+}
+::selection{
+  background:#8d0e0e;
+}
+.container{
+  max-width: 440px;
+  padding: 0 20px;
+  margin: 170px auto;
+}
+.wrapper{
+  width: 100%;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.1);
+}
+.wrapper .title{
+  height: 90px;
+  background: #8d0e0e;
+  border-radius: 5px 5px 0 0;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper form{
+  padding: 30px 25px 25px 25px;
+}
+.wrapper form .row{
+  height: 45px;
+  margin-bottom: 15px;
+  position: static;
+}
+.wrapper form .row input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 12px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+form .row input:focus{
+  border-color: #8d0e0e;
+  box-shadow: inset 0px 0px 2px 2px rgba(26,188,156,0.25);
+}
+form .row input::placeholder{
+  color: #999;
+}
+.wrapper form .row i{
+  position: static;
+  width: 47px;
+  height: 100%;
+  color: #8d0e0es;
+  font-size: 18px;
+  background: #8d0e0e;
+  border: 1px solid #16a085;
+  border-radius: 5px 0 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper form .pass{
+  margin: -8px 0 20px 0;
+}
+.wrapper form .pass a{
+  color: #8d0e0e;
+  font-size: 17px;
+  text-decoration: none;
+}
+.wrapper form .pass a:hover{
+  text-decoration: underline;
+}
+.wrapper form .button input{
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  padding-left: 0px;
+  background: #8d0e0e;
+  border: 1px solid #8d0e0e;
+  cursor: pointer;
+}
+form .button input:hover{
+  background: #8d0e0e;
+}
+.wrapper form .signup-link{
+  text-align: center;
+  margin-top: 20px;
+  font-size: 17px;
+}
+.wrapper form .signup-link a{
+  color: #8d0e0e;
+  text-decoration: none;
+}
+form .signup-link a:hover{
+  text-decoration: underline;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f7f7;
+  }
+
+  .section-heading {
+    font-family: "Dancing Script", cursive;
+    text-align: center;
+    font-size: 64px;
+    color: #10996d;
+    margin: 0 0 70px;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  .profile {
+    position: relative;
+    transition: all 0.2s;
+    
+  }
+
+  .profile:hover {
+    transform: translateY(25px);
+  }
+
+  .profile img {
+    max-width: 100%;
+    border-radius: 50%;
+    border: 5px solid #f7f7f7;
+    filter: drop-shadow(-20px 0 10px rgba(0, 0, 0, 0.1));
+    cursor: pointer;
+  }
+
+  .profile:not(:first-child) img {
+    margin-left: -20px;
+  }
+
+  .profile .name {
+    position: absolute;
+    background-color: #10996d;
+    color: #fff;
+    font-family: "Bebas Neue", cursive;
+    padding: 15px 30px;
+    border-radius: 100px;
+    bottom: -80px; left: 50%;
+    white-space: nowrap;
+    transform: translate(-50%, -50px);
+    letter-spacing: 1px;
+    font-size: 20px;
+    opacity: 0;
+    transition: all 0.3s;
+  }
+
+  .profile .name::before {
+    content: "";
+    position: absolute;
+    width: 15px; height: 15px;
+    background-color: #10996d;
+    top: 0; left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  .profile img:hover + .name {
+    opacity: 1;
+    transform: translateX(-50%);
+    box-shadow: 0 10px 20px rgba(86, 86, 198, 0.3);
+  }
+  body
+		{
+		 overflow-y: scroll;
+		 }
+
+</style>
+<body>
+
+
+
+    <!-- Embedding Fonts from google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <section class="team">
+      <h2 class="section-heading">Our Team</h2>
+      <div class="container">
+        <div class="profile">
+
+        </div>
+
+
+        <div class="profile">
+
+        </div>
+        <div class="profile">
+
+        </div>
+        <div class="profile">
+
+        </div>
+        <div class="profile">
+          <img src="{% static 'images/1.jpg' %}" alt=""/><span class="name">Vishnu</span>
+        </div>
+        <div class="profile">
+          <img src="{% static 'images/2.jpg' %}" alt=""/><span class="name">Mohan</span>
+        </div>
+         <div class="profile">
+          <img src="{% static 'images/3.jpg' %}" alt=""/><span class="name">Prathap</span>
+        </div>
+      </div>
+    </section>
+
+
+</body>
+</html>

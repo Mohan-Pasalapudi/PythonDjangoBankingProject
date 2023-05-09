@@ -1,0 +1,337 @@
+
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block 'title' %}
+      Customer Home
+        {% endblock %}
+    </title>
+</head>
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Vollkorn&display=swap");
+
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+.l-card {
+	width: auto;
+	min-width: 360px;
+	max-width: 480px;
+	height: auto;
+	background: #f5f5f5;
+	color: #272727;
+	padding: 50px;
+	box-shadow: 0px 7px 24px rgba(100, 100, 100, 0.4);
+}
+
+.l-card__text p {
+	font-size: 30px;
+	font-family: "Vollkorn", serif;
+	font-weight: 400;
+	color: #3f3f55;
+	text-align: left;
+}
+
+.l-card__text p::after {
+	content: "\201D";
+	display: inline;
+	color: #999;
+}
+
+.l-card__text p::before {
+	content: "\201C";
+	display: inline;
+	color: #999;
+}
+
+.l-card__user {
+	display: flex;
+	flex-direction: row;
+	padding-top: 24px;
+	margin-top: 12px;
+	/* border-top: 1px solid #c1c1c1; */
+	align-items: center;
+}
+.l-card__userImage {
+	width: 42px;
+	height: 42px;
+	overflow: hidden;
+	border-radius: 50%;
+}
+
+.l-card__userImage img {
+	width: 100%;
+	height: 100%;
+	object-filt: cover;
+}
+
+.l-card__userInfo {
+	display: flex;
+	flex-direction: column;
+	margin-left: 16px;
+}
+
+.l-card__userInfo span:nth-child(1) {
+	font-weight: bold;
+	font-family: sans-serif;
+	font-size: 14px;
+	color: #3f3f55;
+}
+.l-card__userInfo span:nth-child(2) {
+	color: #adada6;
+	font-family: sans-serif;
+	font-size: 12px;
+	margin-top: 2px;
+}
+
+
+        .navbar{
+            background-color: rgba(107, 25, 6, 0.968);
+            border-radius: 1px;
+            position:relative;
+
+        }
+        .navbar ul{
+            overflow: auto;
+        }
+      .navbar li{
+            float:left;
+            list-style: none;
+            margin: 17px;
+
+        }
+        .navbar li a{
+            padding: 3px 3px;
+            text-decoration: none;
+            color: white;
+        }
+        .navbar li a:hover{
+            color: red
+        }
+        .search{
+            float: right;
+            color: white;
+            padding: 12px 75px;
+        }
+        .navbar input{
+            border: 2px solid black;
+            border-radius: 14px;
+            padding: 3px 17px;
+            width: 129px;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+body{
+  background: #dce9e6;
+  overflow: hidden;
+}
+::selection{
+  background:#8d0e0e;
+}
+.container{
+  max-width: 440px;
+  padding: 0 20px;
+  margin: 170px auto;
+}
+.wrapper{
+  width: 100%;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.1);
+}
+.wrapper .title{
+  height: 90px;
+  background: #8d0e0e;
+  border-radius: 5px 5px 0 0;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper form{
+  padding: 30px 25px 25px 25px;
+}
+.wrapper form .row{
+  height: 45px;
+  margin-bottom: 15px;
+  position: static;
+}
+.wrapper form .row input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 12px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+form .row input:focus{
+  border-color: #8d0e0e;
+  box-shadow: inset 0px 0px 2px 2px rgba(26,188,156,0.25);
+}
+form .row input::placeholder{
+  color: #999;
+}
+.wrapper form .row i{
+  position: static;
+  width: 47px;
+  height: 100%;
+  color: #8d0e0es;
+  font-size: 18px;
+  background: #8d0e0e;
+  border: 1px solid #16a085;
+  border-radius: 5px 0 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper form .pass{
+  margin: -8px 0 20px 0;
+}
+.wrapper form .pass a{
+  color: #8d0e0e;
+  font-size: 17px;
+  text-decoration: none;
+}
+.wrapper form .pass a:hover{
+  text-decoration: underline;
+}
+.wrapper form .button input{
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  padding-left: 0px;
+  background: #8d0e0e;
+  border: 1px solid #8d0e0e;
+  cursor: pointer;
+}
+form .button input:hover{
+  background: #8d0e0e;
+}
+.wrapper form .signup-link{
+  text-align: center;
+  margin-top: 20px;
+  font-size: 17px;
+}
+.wrapper form .signup-link a{
+  color: #8d0e0e;
+  text-decoration: none;
+}
+form .signup-link a:hover{
+  text-decoration: underline;
+}
+
+
+input[type=text], select {
+		  width: 100%;
+		  padding: 12px 20px;
+		  margin: 8px 0;
+		  display: inline-block;
+		  border: 1px solid #ccc;
+		  border-radius: 4px;
+		  box-sizing: border-box;
+		}
+
+
+		input[type=password], select {
+		  width: 100%;
+		  padding: 12px 20px;
+		  margin: 8px 0;
+		  display: inline-block;
+		  border: 1px solid #ccc;
+		  border-radius: 4px;
+		  box-sizing: border-box;
+		}
+
+
+		input[type=submit] {
+		  width: 100%;
+		  background-color: orange;
+		  color: white;
+		  padding: 14px 20px;
+		  margin: 8px 0;
+		  border: none;
+		  border-radius: 4px;
+		  cursor: pointer;
+		}
+
+		input[type=submit]:hover {
+		  background-color: #f2db05;
+		  color: black;
+		}
+
+		.reg{
+		  border-radius: 5px;
+		  background-color:#191970;
+		  padding: 20px;
+		   height: 650px;
+           width: 450px;
+           padding-left:50px;
+           margin-left:590px;
+		}
+		.c{
+		color:#F5F5F5;
+		}
+		body
+		{
+		 overflow-y: scroll;
+		 }
+</style>
+<body>
+<h1 align=center>Banking and Financial System</h1>
+
+<br>
+
+ <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="{% url 'cushome' %}">Home</a></li>
+<li><a href="{% url 'transfer' %}">Transfer Money</a></li>
+<li><a href="{% url 'transactions' %}">Transaction History</a></li>
+                <li><a href="{% url 'cuslogout' %}">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<main class="l-card">
+	<section class="l-card__text">
+
+
+ <h1>Welcome, {{ account_holder.fullname }}!</h1>
+<br>
+     <!---   <ul>
+      <li>Account Number: {{ account_holder.account_no }}</li>
+      <li>Full Name: {{ account_holder.fullname }}</li>
+      <li>Date of Birth: {{ account_holder.date_of_birth }}</li>
+      <li>Gender: {{ account_holder.gender }}</li>
+      <li>Email: {{ account_holder.email }}</li>
+      <li>Contact: {{ account_holder.contact }}</li>
+      <li>Address: {{ account_holder.address }}</li>
+        </ul>-->
+        <h1>My Account Balance: {{ account_holder.balance }}</h1>
+
+	</section>
+
+</main>
+
+{% block 'body' %}
+
+{% endblock %}
+
+
+
+</body>
+</html>

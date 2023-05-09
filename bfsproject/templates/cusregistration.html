@@ -1,0 +1,331 @@
+{% load static %}
+
+<html>
+<head>
+
+     <title>
+        {% block 'title' %}
+        Registration
+        {% endblock %}
+    </title>
+
+
+<style>
+
+* {
+   box-sizing: border-box;
+}
+
+
+
+        .navbar{
+            background-color: rgba(107, 25, 6, 0.969);
+            border-radius: 1px;
+            margin:auto;
+
+        }
+        .navbar ul{
+            overflow: auto;
+        }
+       .navbar li{
+            float:left;
+            list-style: none;
+            margin: 17px;
+
+        }
+        .navbar li a{
+            padding: 3px 3px;
+            text-decoration: none;
+            color: white;
+        }
+        .navbar li a:hover{
+            color: red
+        }
+        .search{
+            float: right;
+            color: white;
+            padding: 12px 75px;
+        }
+        .navbar input{
+            border: 2px solid black;
+            border-radius: 14px;
+            padding: 3px 17px;
+            width: 129px;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+body{
+  background: #dce9e6;
+  overflow: hidden;
+}
+::selection{
+  background:#8d0e0e;
+}
+.container{
+  max-width: 440px;
+  padding: 0 20px;
+  margin: 170px auto;
+}
+.wrapper{
+  width: 100%;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.1);
+}
+.wrapper .title{
+  height: 90px;
+  background: #8d0e0e;
+  border-radius: 5px 5px 0 0;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper form{
+  padding: 30px 25px 25px 25px;
+}
+.wrapper form .row{
+  height: 45px;
+  margin-bottom: 15px;
+  position: relative;
+}
+.wrapper form .row input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 12px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+form .row input:focus{
+  border-color: #8d0e0e;
+  box-shadow: inset 0px 0px 2px 2px rgba(26,188,156,0.25);
+}
+form .row input::placeholder{
+  color: #999;
+}
+.wrapper form .row i{
+  position: absolute;
+  width: 47px;
+  height: 100%;
+  color: #8d0e0es;
+  font-size: 18px;
+  background: #8d0e0e;
+  border: 1px solid #16a085;
+  border-radius: 5px 0 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper form .pass{
+  margin: -8px 0 20px 0;
+}
+.wrapper form .pass a{
+  color: #8d0e0e;
+  font-size: 17px;
+  text-decoration: none;
+}
+.wrapper form .pass a:hover{
+  text-decoration: underline;
+}
+.wrapper form .button input{
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  padding-left: 0px;
+  background: #8d0e0e;
+  border: 1px solid #8d0e0e;
+  cursor: pointer;
+}
+form .button input:hover{
+  background: #8d0e0e;
+}
+.wrapper form .signup-link{
+  text-align: center;
+  margin-top: 20px;
+  font-size: 17px;
+}
+.wrapper form .signup-link a{
+  color: #8d0e0e;
+  text-decoration: none;
+}
+form .signup-link a:hover{
+  text-decoration: underline;
+}
+
+
+
+
+input[type=text], select {
+		  width: 500px;
+		  padding: 12px 20px;
+		  margin: 8px 0;
+		  display: inline-block;
+		  border: 1px solid #ccc;
+		  border-radius: 4px;
+		  box-sizing: border-box;
+		}
+		input[type=date], select {
+		  width: 100%;
+		  padding: 12px 20px;
+		  margin: 8px 0;
+		  display: inline-block;
+		  border: 1px solid #ccc;
+		  border-radius: 4px;
+		  box-sizing: border-box;
+		}
+		input[type=number], select {
+		  width: 100%;
+		  padding: 12px 20px;
+		  margin: 8px 0;
+		  display: inline-block;
+		  border: 1px solid #ccc;
+		  border-radius: 4px;
+		  box-sizing: border-box;
+		}
+		input[type=password], select {
+		  width: 100%;
+		  padding: 12px 20px;
+		  margin: 8px 0;
+		  display: inline-block;
+		  border: 1px solid #ccc;
+		  border-radius: 4px;
+		  box-sizing: border-box;
+		}
+
+
+		input[type=submit] {
+		  width: 100%;
+		  background-color: orange;
+		  color: white;
+		  padding: 14px 20px;
+		  margin: 8px 0;
+		  border: none;
+		  border-radius: 4px;
+		  cursor: pointer;
+		}
+
+		input[type=submit]:hover {
+		  background-color: #f2db05;
+		  color: black;
+		}
+
+		.re{
+		  border-radius: 5px;
+
+		  padding: 20px;
+		   height: 650px;
+           width: 450px;
+           padding-left:50px;
+           margin-left:590px;
+		}
+
+		body
+		{
+		 overflow-y: scroll;
+		 }
+		 form{
+		 background-image: url('path/to/image.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+          height: 745px;
+           width: 700px;
+
+            background-color: transparent;
+           position: absolute;
+                   transform: translate(-50%,-50%);
+    top: 55%;
+    left: 30%;
+
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: none;
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 5px 35px;
+
+
+
+}
+
+.background-image {
+  background-image: url('/static/images/cusreg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+    </style>
+
+
+
+</head>
+<body class="background-image">
+<header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'empregistration' %}">Employee Registration</a></li>
+                <li><a href="{% url 'emplogin' %}">Employee Login</a></li>
+                 <li><a href="{% url 'cusregistration' %}">Customer Registration</a></li>
+                 <li><a href="{% url 'cuslogin' %}">Customer Login</a></li>
+                <li><a href="{% url 'adminlogin' %}">Admin Login</a></li>
+                <li><a href="">About Us</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+
+
+{% block 'body' %}
+
+<h3 align="center"><mark>{{msg}}</mark></h3>
+
+<div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+<h3 align="Center"><u>Customer Registration</u></h3>
+
+<div class="re">
+<form method="post">
+    {% csrf_token %}
+
+<table align=center class="reg">
+
+    {% for field in cusform %}
+
+<tr>
+<td><label class="c">{{field.label}}</label></td>
+<td>{{field}}</td>
+</tr>
+
+    {% endfor %}
+
+<tr><td></td></tr>
+
+<tr align=center>
+<td colspan=2><input type="submit" value="Register" class="button"></td>
+</tr>
+
+</table>
+
+</form>
+
+
+{% endblock %}
+</div>
+</div>
+</div>
+</body>
+</html>

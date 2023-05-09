@@ -1,0 +1,78 @@
+{% extends 'adminhome.html' %}
+{% load static %}
+
+<html>
+<head>
+
+     <title>
+        {% block 'title' %}
+        View Employees
+        {% endblock %}
+    </title>
+
+
+
+<style>
+
+
+
+    </style>
+
+
+
+</head>
+<body>
+
+
+{% block 'body' %}
+
+
+<h2 align="center"><u>View All Employees</u></h2>
+
+Total Employees = {{count}}  <br><br>
+
+<table align="center" border="2">
+    <tr style="font-weight:bold">
+        <td>ID</td>
+           <td>Aadhar No</td>
+        <td>Full Name</td>
+
+        <td>Gender</td>
+        <td>Date of Birth</td>
+        <td>EMAIL ID</td>
+        <td>Username</td>
+
+        <td>Loction</td>
+        <td>Contact No</td>
+        <td>Registration Time</td>
+       <!-- <td>Action</td>-->
+    </tr>
+
+    {% for emp in emplist %}
+    <tr>
+        <td>{{emp.id}}</td>
+         <td>{{emp.aadharno}}</td>
+        <td>{{emp.fullname}}</td>
+        <td>{{emp.gender}}</td>
+        <td>{{emp.dateofbirth}}</td>
+           <td>{{emp.email}}</td>
+        <td>{{emp.username}}</td>
+        <td>{{emp.location}}</td>
+        <td>{{emp.contact}}</td>
+        <td>{{emp.registrationtime}}</td>
+        <td>
+
+      <a href="/deleteemp/{{emp.id}}" >Delete</a>
+        </td>
+
+    </tr>
+    {% endfor %}
+
+</table>
+
+{% endblock %}
+
+
+
+</body>
+</html>

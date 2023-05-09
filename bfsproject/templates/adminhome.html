@@ -1,0 +1,87 @@
+{% load static %}
+<html>
+<head>
+
+    <title>
+        {% block 'title' %}
+        Main
+        {% endblock %}
+    </title>
+
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+<style>
+
+        .navbar{
+            background-color: rgba(107, 25, 6, 0.968);
+            border-radius: 1px;
+            position:relative;
+
+        }
+        .navbar ul{
+            overflow: auto;
+        }
+      .navbar li{
+            float:left;
+            list-style: none;
+            margin: 17px;
+
+        }
+        .navbar li a{
+            padding: 3px 3px;
+            text-decoration: none;
+            color: white;
+        }
+        .navbar li a:hover{
+            color: red
+        }
+        .search{
+            float: right;
+            color: white;
+            padding: 12px 75px;
+        }
+        .navbar input{
+            border: 2px solid black;
+            border-radius: 14px;
+            padding: 3px 17px;
+            width: 129px;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+</style>
+
+
+
+
+</head>
+<body>
+<h1 align=center>Banking and Finance System</h1>
+
+<br>
+
+ <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="{% url 'adminhome' %}">Home</a></li>
+
+                <li><a href="{% url 'viewemps' %}">View Employees</a></li>
+                <li><a href="{% url 'viewcus' %}">View Customers</a></li>
+
+                <li><a href="{% url 'adminlogout' %}">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+<h4 align="right">Hi, {{auname}}</h4>
+<br>
+
+{% block 'body' %}
+
+{% endblock %}
+
+</body>
+</html>

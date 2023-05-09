@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transactions</title>
+</head>
+<style>
+  body
+		{
+		 overflow-y: scroll;
+		 }
+</style>
+<body>
+{% block content %}
+  <h1>Transaction Details</h1>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Transaction ID</th>
+        <th>Account Number</th>
+        <th>Transaction Type</th>
+        <th>Amount</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for transaction in transactions %}
+        <tr>
+          <td>{{ transaction.id }}</td>
+          <td>{{ transaction.account.account_no }}</td>
+          <td>{{ transaction.transaction_type }}</td>
+          <td>{{ transaction.amount }}</td>
+          <td>{{ transaction.date }}</td>
+        </tr>
+      {% empty %}
+        <tr>
+          <td colspan="5">No transactions found.</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
+</body>
+</html>
